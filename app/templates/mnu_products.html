@@ -31,6 +31,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">Código</th>
       <th scope="col">Nome</th>
       <th scope="col">Empresa</th>
 	  <th scope="col">Descrição</th>
@@ -39,17 +40,21 @@
     </tr>
   </thead>
   <tbody>
+  {% for dbs in db %}
     <tr>
-      <th scope="row">{{dbs.prodId}}</th>
-      <td>{{dbs.prodName}}</td>
-      <td>{{dbs.prodCompany}}</td>
-      <td>{{dbs.prodDescription}}</td>
-      <td>{{dbs.prodPrice}}</td>
-      <td>
-        <a href ="" type="button" class="btn btn-outline-dark">Editar</a>
-        <a href ="" type="button" class="btn btn-outline-dark">Excluir</a>
-      </td>
+        <td>{{dbs.id}}</td>
+        <td>{{dbs.prodId}}</td>
+        <td>{{dbs.prodName}}</td>
+        <td>{{dbs.prodCompany}}</td>
+        <td>{{dbs.prodDescription}}</td>
+        <td>{{dbs.prodPrice}}</td>
+        <td>
+           <a href ="/view_prod/{{dbs.id}}/" type="button" class="btn btn-outline-dark">+</a>
+          <a href ="" type="button" class="btn btn-outline-dark">Editar</a>
+          <a href ="" type="button" class="btn btn-outline-dark">Excluir</a>
+        </td>
     </tr>
+   {% endfor %}
   </tbody>
 </table>
 

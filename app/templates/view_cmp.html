@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Byron Companies</title>
+  <title>Companies View</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <div class="multi-bg-example">
@@ -24,43 +24,24 @@
     </div>
 
     <div class="container p-3"></div>
-    <h1 class="text-center" >Empresas cadastradas</h1>
+    <h1 class="text-center" >Empresa cadastrada</h1>
     <div class="container p-3"></div>
+<body>
 
-<table class="table table-danger table-striped table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Código</th>
-      <th scope="col">CNPJ</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Endereço</th>
-	  <th scope="col">E-mail</th>
-	  <th scope="col">Telefone</th>
-      <th scope = "col"></th>
-    </tr>
-  </thead>
-  <tbody>
-      {% for dbs in db %}
-      <tr>
-        <th>{{dbs.id}}</th>
-        <th>{{dbs.cmpId}}</th>
-        <td>{{dbs.cmpCnpj}}</td>
-        <td>{{dbs.cmpName}}</td>
-        <td>{{dbs.cmpAddress}}</td>
-        <td>{{dbs.cmpEmail}}</td>
-        <td>{{dbs.cmpPhone}}</td>
-        <td>
-           <a href ="/view_cmp/{{dbs.id}}/" type="button" class="btn btn-outline-dark">+</a>
-          <a href ="" type="button" class="btn btn-outline-dark">Editar</a>
-          <a href ="" type="button" class="btn btn-outline-dark">Excluir</a>
-        </td>
-      </tr>
-      {% endfor %}
-  </tbody>
-</table>
-
-
+<div class="card">
+  <div class="card-header text-white bg-danger mb-3">
+	  <b>Informações</b>
+  </div>
+  <div class="card-body">
+	  <h5 class="card-title"><b>Nome: </b>{{db.cmpName}}</h5>
+      <p class="card-text pt-4"><b>Código:</b> {{db.cmpId}}</p>
+	  <p class="card-text"><b>CNPJ:</b> {{db.cmpCnpj}}</p>
+	  <p class="card-text"><b>Endereço:</b> {{db.cmpAddress}}</p>
+	  <p class="card-text"><b>Telefone:</b> {{db.cmpPhone}}</p>
+	  <p class="card-text"><b>E-mail:</b> {{db.cmpEmail}}</p>
+    <a href="/mnu_companies" class="btn btn-danger">Voltar</a>
+  </div>
+</div>
 
 </body>
 </html>

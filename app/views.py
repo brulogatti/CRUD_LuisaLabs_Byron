@@ -39,3 +39,14 @@ def create_company(request):
         form_companies.save()
         return render(request, 'mnu_companies.html')
 
+def view_cmp(request, pk):
+    data={}
+    data['db']=Companies.objects.get(pk=pk)
+    return render(request,'view_cmp.html', data)
+
+def view_prod(request,pk):
+    data={}
+    data['db']=Products.objects.get(pk=pk)
+    return render (request,'view_prod.html', data)
+
+
