@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-8 m-auto pt-4 pb-2 text-center">
-      <form name="form_companies" id = "form_companies" action="/create_company/" method="post">
+      <form name="form_companies" id = "form_companies" action="{% if db %}/update_cmp/{{db.id}}/{% else %}/create_company/{% endif %}" method="post">
         {% csrf_token %}
         <a style="font-family:verdana; color:tomato;"><b>Código:</b></a>
         <div class="form-group">{{form.cmpId}}</div>

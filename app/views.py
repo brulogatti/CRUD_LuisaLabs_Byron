@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app.forms import ProductsForm, CompaniesForm
 from app.models import Products, Companies
 
@@ -48,5 +48,43 @@ def view_prod(request,pk):
     data={}
     data['db']=Products.objects.get(pk=pk)
     return render (request,'view_prod.html', data)
+
+def edit_cmp(request, pk):
+    data={}
+    data['db']=Companies.objects.get(pk=pk)
+    data['form']=CompaniesForm(instance=data['db'])
+    return render(request, 'form_companies.html', data)
+
+def edit_prod(request, pk):
+    data={}
+    data['db']=Products.objects.get(pk=pk)
+    data['form']=ProductsForm(instance=data['db'])
+    return render(request, 'form_products.html', data)
+
+def update_cmp(request, pk):
+    data ={}
+    data['db']=Companies.objects.get(pk=pk)
+    form=CompaniesForm(request.POST or None, instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('mnu_companies')
+
+def update_prod(request, pk):
+    data ={}
+    data['db']=Products.objects.get(pk=pk)
+    form=ProductsForm(request.POST or None, instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('mnu_products')
+
+def delete_cmp(request,pk):
+    db = Companies.objects.get(pk=pk)
+    db.delete()
+    return redirect('mnu_companies')
+
+def delete_prod(request, pk):
+    db=Products.objects.get(pk=pk)
+    db.delete()
+    return redirect('mnu_products')
 
 
