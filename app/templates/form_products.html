@@ -14,14 +14,14 @@
   <body>
 
     <div>
-	  <a href="/" type="button" class="btn btn-outline-dark btn-lg"> Home</a>
-      <a>|</a>
-      <a href ="/mnu_products" type="button" class="btn btn-outline-dark btn-lg">Produtos</a>
-      <a>|</a>
-      <a href ="" type="button" class="btn btn-outline-dark btn-lg">Busca</a>
-      <a>|</a>
-      <a href ="/mnu_companies" type="button" class="btn btn-outline-dark btn-lg">Vendedores</a>
-    </div>
+      <a href="/" type="button" class="btn btn-outline-dark btn-lg"> Home</a>
+        <a>|</a>
+        <a href ="/mnu_products" type="button" class="btn btn-outline-dark btn-lg">Produtos</a>
+        <a>|</a>
+        <a href ="/mnu_companies" type="button" class="btn btn-outline-dark btn-lg">Empresas</a>
+        <a>|</a>
+        <a href ="" type="button" class="btn btn-outline-dark btn-lg">Busca</a>
+      </div>
 
   <div class="col-8 m-auto pt-4 pb-2 text-center">
       <form name="form_products" id = "form_products" action="{% if db %}/update_prod/{{db.id}}/{% else %}/create_product/{% endif %}" method="post">
