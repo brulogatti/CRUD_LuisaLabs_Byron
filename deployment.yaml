@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-crud
+  name: crud_luizalabs_byron
 spec:
   selector:
     matchLabels:
-      app: crud-python
+      app: crud_luizalabs_byron
   replicas: 3
   template:
     metadata:
       labels:
-        app: crud-python
+        app: crud_luizalabs_byron
     spec:
       containers:
-        - name: crud-python
-          image: elizaoliveria/crud-python
+        - name: crud_luizalabs_byron
+          image: elizaoliveria/crud_luizalabs_byron
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
