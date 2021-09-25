@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-crud
+spec:
+  selector:
+    matchLabels:
+      app: crud-python
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: crud-python
+    spec:
+      containers:
+        - name: crud-python
+          image: elizaoliveria/crud-python
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
