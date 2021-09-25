@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Companies Forms</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c1cbc6fb25.js" crossorigin="anonymous"></script>
 </head>
 <div class="multi-bg-example">
   <header>
-    <h1 class = "p-3 mb-2 bg-danger text-white text-center" style="font-family:verdana;">Byron Store</h1>
+    <h1 class = "p-3 mb-2 bg text-white text-center" style="font-family:verdana; background-color: cornflowerblue;">Byron Store</h1>
   </header>
   <body>
 
@@ -25,18 +26,18 @@
     <div id="result"></div>
       <form name="form_products" id = "form_products" action="{% if db %}/update_prod/{{db.id}}/{% else %}/create_product/{% endif %}" method="post">
         {% csrf_token %}
-        <a style="font-family:verdana; color:tomato;"><b>Código:</b></a>
+        <a style="font-family:verdana; color:#135d7c;"><b>Código:</b></a>
         <div class="form-group">{{form.prodId}}</div>
-        <a style="font-family:verdana; color:tomato;"><b>Nome:</b></a>
+        <a style="font-family:verdana; color:#135d7c;"><b>Nome:</b></a>
         <div class="form-group">{{form.prodName}}</div>
-        <a style="font-family:verdana; color:tomato;"><b>Empresa:</b></a>
+        <a style="font-family:verdana; color:#135d7c;"><b>Empresa:</b></a>
         <div class="form-group">{{form.prodCompany}}</div>
-        <a style="font-family:verdana; color:tomato;"><b>Descrição:</b></a>
+        <a style="font-family:verdana; color:#135d7c;"><b>Descrição:</b></a>
         <div class="form-group">{{form.prodDescription}}</div>
-        <a style="font-family:verdana; color:tomato;"><b>Preço:</b></a>
+        <a style="font-family:verdana; color:#135d7c;"><b>Preço:</b></a>
         <div class="form-group">{{form.prodPrice}}</div>
         <div class="container p-3"></div>
-        <input type = "submit" class="btn btn-danger btn-lg " value="Salvar">
+        <input type = "submit" class="btn btn-lg" style="font-family:verdana; background-color: cornflowerblue;" value="Salvar">
       </form>
     </div>
 
