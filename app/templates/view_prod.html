@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products View</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<div class="multi-bg-example">
+  <header>
+    <h1 class = "p-3 mb-2 bg-danger text-white text-center" style="font-family:verdana;">Byron Store</h1>
+  </header>
+  <body>
+
+    <div>
+      <a href="/" type="button" class="btn btn-outline-dark btn-lg"> Home</a>
+        <a>|</a>
+        <a href ="/mnu_products" type="button" class="btn btn-outline-dark btn-lg">Produtos</a>
+        <a>|</a>
+        <a href ="/mnu_companies" type="button" class="btn btn-outline-dark btn-lg">Empresas</a>
+      </div>
+
+    <div class="container p-3"></div>
+    <h1 class="text-center" >Produto cadastrado</h1>
+    <div class="container p-3"></div>
+<body>
+
+<div class="card">
+  <div class="card-header text-white bg-danger mb-3">
+	  <b>Informações</b>
+  </div>
+  <div class="card-body">
+	  <h5 class="card-title"><b>Nome: </b>{{db.prodName}}</h5>
+      <p class="card-text pt-4"><b>Código:</b> {{db.prodId}}</p>
+	  <p class="card-text"><b>Empresa:</b> {{db.prodCompany}}</p>
+	  <p class="card-text"><b>Preço: R$</b> {{db.prodPrice}}</p>
+	  <p class="card-text"><b>Descrição:</b> {{db.prodDescription}}</p>
+    <a href="/mnu_products" class="btn btn-danger">Voltar</a>
+  </div>
+</div>
+
+</body>
+</html>
