@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Byron Products</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c1cbc6fb25.js" crossorigin="anonymous"></script>
 </head>
 <div class="multi-bg-example">
   <header>
-    <h1 class = "p-3 mb-2 bg-danger text-white text-center" style="font-family:verdana;">Byron Store</h1>
+    <h1 class = "p-3 mb-2 bg text-white text-center" style="font-family:verdana; background-color: cornflowerblue;">Byron Store</h1>
   </header>
   <body>
 
@@ -34,7 +35,7 @@
     <h1 class="text-center" >Produtos cadastrados</h1>
     <div class="container p-3"></div>
 
-<table class="table table-danger table-striped table-hover">
+<table class="table table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -56,12 +57,12 @@
         <td>{{dbs.prodDescription}}</td>
         <td>{{dbs.prodPrice}}</td>
         <td>
-           <a href ="/view_prod/{{dbs.id}}/" type="button" class="btn btn-outline-dark">+</a>
-          <a href ="/edit_prod/{{dbs.id}}/" type="button" class="btn btn-outline-dark">Editar</a>
-          <a href ="/delete_prod/{{dbs.id}}/" type="button" class="btn btn-outline-dark btnDel">Excluir</a>
+          <a href ="/view_prod/{{dbs.id}}/" type="button" class="far fa-eye" style="color: rgb(27, 32, 48); text-decoration:none; margin-left: 1rem"></a>
+          <a href ="/edit_prod/{{dbs.id}}/" type="button" class="far fa-edit" style="color: rgb(27, 32, 48); text-decoration:none; margin-left: 1rem"></a>
+          <a href ="/delete_prod/{{dbs.id}}/" type="button" class="far fa-trash-alt" style="color: rgb(27, 32, 48); text-decoration:none; margin-left: 1rem"></a>
         </td>
     </tr>
-   {% endfor %}
+  {% endfor %}
   </tbody>
 </table>
 
