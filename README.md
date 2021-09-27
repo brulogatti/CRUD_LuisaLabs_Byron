@@ -3,37 +3,35 @@ This is a CRUD project in Python. It was developed as a final challenge for the 
 
 ## Table of Content - [Byron Store!](#welcome-to-byron-store)
 - [README Byron Store!](#readme-byron-store)
-  - [Table of Content - Byron Store!](#table-of-content---byron-store)
+	- [Table of Content - Byron Store!](#table-of-content---byron-store)
 - [Developer Tools](#developer-tools)
-    - [Python](#python)
-      - [pip](#pip)
-      - [.yaml](#yaml)
-  - [DataBase Settings](#database-settings)
-    - [DB Modeling](#db-modeling)
-  - [Frameworks](#frameworks)
-    - [Django](#django)
-    - [Bootstrap](#bootstrap)
-  - [Containerization Tools](#containerization-tools)
-    - [Docker](#docker)
-    - [Jenkins](#jenkins)
-    - [MiniKube](#minikube)
+		- [Python](#python)
+			- [pip](#pip)
+			- [.yaml](#yaml)
+	- [DataBase Settings](#database-settings)
+		- [DB Modeling](#db-modeling)
+	- [Frameworks](#frameworks)
+		- [Django](#django)
+		- [Bootstrap](#bootstrap)
+	- [Containerization Tools](#containerization-tools)
+		- [Docker](#docker)
+		- [MiniKube](#minikube)
 - [How to run the project](#how-to-run-the-project)
-    - [1. Commands](#1-commands)
-    - [2. Coding](#2-coding)
-      - [2.1. Starting up](#21-starting-up)
-      - [2.2. Models and migrations](#22-models-and-migrations)
-      - [2.3. Jenkins](#23-jenkins)
-      - [2.4. Docker image](#24-docker-image)
-      - [2.5. Kubernetes](#25-kubernetes)
+		- [1. Commands](#1-commands)
+		- [2. Coding](#2-coding)
+			- [2.1. Starting up](#21-starting-up)
+			- [2.2. Models and migrations](#22-models-and-migrations)
+			- [2.3. Docker image](#23-docker-image)
+			- [2.4. Kubernetes](#24-kubernetes)
 - [How to use](#how-to-use)
-  - [Home Page](#home-page)
-        - [You can always navigate back and forth from the sections in our site trought the main buttons.](#you-can-always-navigate-back-and-forth-from-the-sections-in-our-site-trought-the-main-buttons)
-  - [Product](#product)
-    - [Products Button](#products-button)
-    - [Product Registration button](#product-registration-button)
-  - [Company](#company)
-    - [Companies button](#companies-button)
-    - [Company Registration button](#company-registration-button)
+	- [Home Page](#home-page)
+				- [You can always navigate back and forth from the sections in our site trought the main buttons.](#you-can-always-navigate-back-and-forth-from-the-sections-in-our-site-trought-the-main-buttons)
+	- [Product](#product)
+		- [Products Button](#products-button)
+		- [Product Registration button](#product-registration-button)
+	- [Company](#company)
+		- [Companies button](#companies-button)
+		- [Company Registration button](#company-registration-button)
 - [Our Team](#our-team)
 
 
@@ -77,9 +75,6 @@ You can install Docker following the instructions from the following link:
 
 If you use Linux systems you'll probably need to install [Docker Compose](https://docs.docker.com/compose/install/) manually. In Mac and Windows versions of Docker, Compose is already included.
 
-### Jenkins
-You can download and install Jenkins in it's [download](https://www.jenkins.io/download/) page. We use it as an automation server and in this project we prefered Jenkins Stable (LTS) version for [**Docker**](https://hub.docker.com/r/jenkins/jenkins).
-
 ### MiniKube
 For this project we used **Minikube** as a local Kubernetes for **Docker**, althought it can also be used in VM enviroment. Follow the [link](https://minikube.sigs.k8s.io/docs/start/) to the documentation and installation instructions.
 
@@ -119,8 +114,7 @@ Finaly, run the app file
 python manage.py startapp app
 ```
 
- - **Obs:** This app file should be created in a folder named settings.py,
-   so Python recognize it as a part of our project.
+- **Obs:** This app file should be created in a folder named settings.py, so Python recognize it as a part of our project.
 
 **Git and GitHub**
 Now, you should push the project to your repo in GitHub using the following commands:
@@ -157,30 +151,8 @@ This will start the SQLite automatically, which we now work with in the settings
 Next, go to this [link](https://docs.djangoproject.com/en/3.2/topics/forms/modelforms/) and import the model in the views.
 Inside the views redirect we insert route name.
 
-#### 2.3. Jenkins
-Install Jenkins using the following commands:
-```
-brew install jenkins-lts
-brew services start jenkins-lts
-```
 
-Configure it using:
-```
-sudo nano /usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist
-```
-
-Modify the host line like this:
-```
-<string>--httpListenAddress=0.0.0.0</string>
-```
-
-Get the password with cat command, use the correspondent route 
-```
-sudo cat /Users/user-name/.jenkins/secrets/initialAdminPassword
-```
-
-
-#### 2.4. Docker image
+#### 2.3. Docker image
 If you don't create a tag for the image like **user_docker_hub/image_name**, you may have some problems. To avoid it when doing the build create the image with that name pattern.
 ```
 docker build -t django-kube .
@@ -193,7 +165,7 @@ docker run django-kube
 ```
 
 
-#### 2.5. Kubernetes
+#### 2.4. Kubernetes
 Create a file **deployment.yaml** :
 ```
 apiVersion: v1 
