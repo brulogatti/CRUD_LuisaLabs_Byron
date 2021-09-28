@@ -4,18 +4,6 @@ This is a CRUD project in Python. It was developed as a final challenge for the 
 ## Table of Content - [Byron Store!](#welcome-to-byron-store)
 - [README Byron Store!](#readme-byron-store)
 	- [Table of Content - Byron Store!](#table-of-content---byron-store)
-- [Developer Tools](#developer-tools)
-		- [Python](#python)
-			- [pip](#pip)
-			- [.yaml](#yaml)
-	- [DataBase Settings](#database-settings)
-		- [DB Modeling](#db-modeling)
-	- [Frameworks](#frameworks)
-		- [Django](#django)
-		- [Bootstrap](#bootstrap)
-	- [Containerization Tools](#containerization-tools)
-		- [Docker](#docker)
-		- [MiniKube](#minikube)
 - [How to run the project](#how-to-run-the-project)
 		- [1. Commands](#1-commands)
 		- [2. Coding](#2-coding)
@@ -34,49 +22,6 @@ This is a CRUD project in Python. It was developed as a final challenge for the 
 		- [Company Registration button](#company-registration-button)
 - [Our Team](#our-team)
 
-
-
-# Developer Tools
-
-### Python 
-First you'll need to install **PyCharm** as your working IDE. Then, make sure to have **Pyhton** installed too. You can look in the following links to download and install:
-- [PyCharme](https://www.jetbrains.com/pycharm/download/), you're looking for Community version.
-- [Pyhton](https://www.python.org/downloads/), you'll want the version compatible with you Operational System
-
-#### pip
-For this project we'll need pip as our **package-management system**, and sometimes it may not be installed automatically when you download Pyhton. To make sure it's installed follow this [link](https://pip.pypa.io/en/stable/installation/).
-
-#### .yaml
-Now we'll install yaml as an **environment marker support**. Click [here](https://yaml.readthedocs.io/en/latest/install.html) to see how to install.
-
-## DataBase Settings
-For this project, we used **SQLite**, since it's already integrated with Python. You can look up for the **Precompiled Binaries** in the following [link](https://www.sqlite.org/download.html). Be sure to download and install the version compatible with you Operational System.
-
-### DB Modeling
-If you want to draw a model for you DB, we suggest [Diagrams](https://app.diagrams.net/), as it's a free online diagram software.
-
-## Frameworks
-Now that we set up our working enviroment and database tool, it's time to set up our framework. Frameworks are structures intended to serve as a support or guide developing our project. In our project we used Django and Bootstrap.
-
-**Note: Frameworks are project specific, therefore you should remember to install it in your project folder. You can use the terminal in PyCharm to do it.**
-
-### Django
-Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. You'll find all the instructions to set it up [here](https://docs.djangoproject.com/en/3.2/intro/install/). 
-
-### Bootstrap
-[Here](https://getbootstrap.com/) you'll find Bootstrap's official site, you can use it to build responsive, mobile-first sites. 
-- You can click in the **[Download](https://getbootstrap.com/docs/5.1/getting-started/download/)** button and install it in your project folder; 
-- or you can click in the **[Get started](https://getbootstrap.com/docs/5.1/getting-started/introduction/)** button to see the CSS stylesheet link and add it into your HTML
-
-## Containerization Tools
-### Docker
-You can install Docker following the instructions from the following link:
-[Docker Engine](https://docs.docker.com/get-docker/)
-
-If you use Linux systems you'll probably need to install [Docker Compose](https://docs.docker.com/compose/install/) manually. In Mac and Windows versions of Docker, Compose is already included.
-
-### MiniKube
-For this project we used **Minikube** as a local Kubernetes for **Docker**, althought it can also be used in VM enviroment. Follow the [link](https://minikube.sigs.k8s.io/docs/start/) to the documentation and installation instructions.
 
 # How to run the project
 ### 1. Commands
