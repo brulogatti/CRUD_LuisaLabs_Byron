@@ -1,5 +1,7 @@
-# README Byron Store!
-This is a CRUD project in Python. It was developed as a final challenge for the Google Cloud Platform Boot Camp offered by Magazine Luiza and Gama Academy. Here you'll find your working environment settings instructions and how to navigate in our website.
+# CRUD Python
+
+
+
 
 ## Table of Content - [Byron Store!](#welcome-to-byron-store)
 - [README Byron Store!](#readme-byron-store)
@@ -11,7 +13,7 @@ This is a CRUD project in Python. It was developed as a final challenge for the 
 		- [2.2. Models and migrations](#22-models-and-migrations)
 		- [2.3. Docker image](#23-docker-image)
 		- [2.4. Kubernetes](#24-kubernetes)
-- [Our Team](#our-team)
+
 
 
 # How to run the project
@@ -159,11 +161,3 @@ docker save django-kube | (eval $(minikube docker-env) && docker load)
 And finish calling the dashboard to open Kubernetes
 ```
 minikube dashboard
-```
-
-# Our Team
-- Tania Eliza Oliveira - [GitHub](https://github.com/elizaoliveira88)
-- Milena Maria Costa Pininga - [GitHub](https://github.com/mmcpininga)
-- Maria Fernanda Soares - [GitHub](https://github.com/mafesoares)
-- Bruna Logatti - [GitHub](https://github.com/brulogatti)
-- Beatriz Abne Alqueres Cruz - [GitHub](https://github.com/Abne-b)
